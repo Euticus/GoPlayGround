@@ -2,17 +2,20 @@ package main
 
 import "fmt"
 
-var x int = 42
-var y bool = true
+const (
+	a = iota
+	b = iota
+	c = iota
+	d = iota
+)
 
-//var z string = "James Bond"
-
-type pineapple bool
-
-var fruit pineapple = true
+const (
+	e = d + iota
+	f = iota
+	g = b
+)
 
 func main() {
 
-	s := fmt.Sprintf("%v\t%v\t%T\t", x, y, fruit)
-	fmt.Println(s)
+	fmt.Println(a, b, c, d, e, f, g)
 }
